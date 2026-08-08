@@ -2,6 +2,10 @@
 
 This repository is the central source of truth for TeamMatesIQ strategy, architecture, product, UX, security, commercial, engineering, API, database and brand documentation.
 
+## Documentation
+
+See the [TeamMates canonical document register](docs/README.md).
+
 ## Repository structure
 
 - `docs/` — business, product and delivery documentation
