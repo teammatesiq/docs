@@ -161,9 +161,9 @@ erDiagram
 |---|---|
 | Purpose | Represents a deployed digital colleague operating for a customer on TMOS. |
 | Ownership | The deployed instance belongs to the customer Organisation; TMOS owns and governs the runtime representation. |
-| Key attributes | TeamMate identifier, Organisation identifier, Workspace identifier, selected name, Role or Blueprint version reference, DNA version, lifecycle state, configuration and relevant component-version references. |
+| Key attributes | TeamMate identifier, Organisation identifier, Workspace identifier, selected name, Role or Blueprint version reference, DNA version, lifecycle state, suspension reason where suspended, configuration and relevant component-version references. |
 | Relationships | Belongs to an Organisation and Workspace; instantiates a versioned Role or Blueprint; uses Skills, Workflows, Permissions, Policies, Knowledge and Memory; creates Workflow Instances, Tasks, Approvals, Notifications and Audit Events. |
-| Lifecycle | Draft → Configuring → Probation → Active → Suspended → Archived. Becoming Active never grants additional authority automatically. |
+| Lifecycle | Configuring → Probation → Active → Suspended → Archived (D-001 / F-003). There is no Draft state for a deployed TeamMate. Becoming Active never grants additional authority automatically. Customer-facing Paused is `Suspended` with `suspension_reason = customer_paused`, not a separate state. Supported reasons may also include `trial_expired`, `subscription_suspended`, `security_suspension` and `admin_suspended`. While Suspended, no new active execution or controlled external action may start; scheduled work stops where appropriate while durable workflow/task state, configuration, required audit history and retained customer data are preserved. Reactivation revalidates relevant entitlement, integrations, permissions, policy and configuration. |
 | Tenancy scope | Scoped to exactly one Organisation and normally one Workspace. |
 | Audit expectations | Creation, configuration, version assignment, lifecycle transitions, permission changes, controlled actions and archival are audited. |
 

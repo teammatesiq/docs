@@ -374,6 +374,7 @@ Fields:
 - name VARCHAR NOT NULL
 - display_title VARCHAR NOT NULL
 - status VARCHAR NOT NULL
+- suspension_reason VARCHAR NULL
 - probation_status VARCHAR NULL
 - dna_version VARCHAR NOT NULL
 - blueprint_version VARCHAR NOT NULL
@@ -392,6 +393,20 @@ Suggested status values:
 - active
 - suspended
 - archived
+
+The deployed TeamMate status set is exactly `configuring`, `probation`, `active`, `suspended` and `archived` (D-001 / F-003). It does not include `draft`.
+
+Supported `suspension_reason` values:
+
+- customer_paused
+- trial_expired
+- subscription_suspended
+- security_suspension
+- admin_suspended
+
+`suspension_reason` must be non-null when `status = suspended` and null for other statuses. Customer-facing Paused is stored as `status = suspended` with `suspension_reason = customer_paused`.
+
+Suspension and reactivation transitions must be represented in the audit store. Reactivation clears `suspension_reason` only after relevant subscription or entitlement, integration, permission, policy and TeamMate configuration checks succeed.
 
 # 16. Skill Definitions
 

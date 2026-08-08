@@ -447,13 +447,43 @@ Examples:
 
 `POST /api/v1/teammates/{teammate_id}/suspend`
 
-Suspension must prevent new active execution according to platform rules.
+Request:
+
+```json
+{
+  "reason": "customer_paused"
+}
+```
+
+Supported reasons are:
+
+- `customer_paused`
+- `trial_expired`
+- `subscription_suspended`
+- `security_suspension`
+- `admin_suspended`
+
+The service must authorise the caller or trusted platform source for the supplied reason, transition the TeamMate to `status = suspended`, store `suspension_reason`, set `suspended_at`, and record an audit event containing actor or source, reason and timestamp.
+
+Suspension must prevent new active execution and new controlled external actions. Scheduled TeamMate work must stop where appropriate. Durable workflow and task state, configuration, required audit history and customer data subject to retention rules must be preserved.
+
+Customer-facing Paused uses `reason = customer_paused`; Paused is not a separate domain state (D-001 / F-003).
 
 # 25. Reactivate TeamMate
 
 `POST /api/v1/teammates/{teammate_id}/activate`
 
-Requires appropriate authority and valid configuration.
+Requires appropriate authority. Before changing status to `active`, the service must revalidate:
+
+- subscription or entitlement
+- required integrations and connection health
+- effective permissions
+- applicable policy
+- TeamMate configuration
+
+If any validation fails, the TeamMate remains `suspended`, no execution resumes, and the response identifies the failed validation without exposing sensitive control details. The attempt and outcome must be audited.
+
+On success, the service sets `status = active`, clears `suspension_reason`, records the transition, and permits eligible scheduled and active work to resume through normal permission, policy and approval controls. Preserved workflows and tasks resume only according to their own valid state and recovery rules; reactivation does not imply that a controlled external action is approved.
 
 # 26. Probation API
 

@@ -925,17 +925,23 @@ Authorised humans must be able to:
 
 TeamMates must not resist legitimate governance actions.
 
+Customer pause is represented as `status = suspended` with `suspension_reason = customer_paused`; Paused is not a separate lifecycle state (D-001 / F-003).
+
 # 54. TeamMate Suspension
 
-Suspending a TeamMate should:
+Suspending a TeamMate must:
 
 - stop new active execution
 - stop scheduled TeamMate work where appropriate
-- preserve required work state
-- preserve audit
-- prevent new external actions
+- prevent new controlled external actions
+- preserve durable workflow and task state
+- preserve configuration
+- preserve required audit history
+- preserve customer data according to applicable retention rules
 
-Suspension should not silently delete customer data.
+The suspension reason must be recorded and audited. Supported reasons may include `customer_paused`, `trial_expired`, `subscription_suspended`, `security_suspension` and `admin_suspended`.
+
+Reactivation must be authorised and must revalidate relevant subscription or entitlement, integrations, permissions, policy and TeamMate configuration before active execution resumes. A failed validation leaves the TeamMate Suspended and produces an appropriate audit event and customer-visible explanation.
 
 # 55. Integration Disconnection
 

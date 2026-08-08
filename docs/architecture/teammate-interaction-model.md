@@ -650,6 +650,10 @@ Recommended customer-visible states:
 - Paused
 - Connection Issue
 
+**Paused** is the customer-facing representation of the deployed TeamMate domain state `status = suspended` with `suspension_reason = customer_paused` (D-001 / F-003). It is not an additional lifecycle state.
+
+While Paused, the experience must not imply that new active execution, scheduled TeamMate work that should be stopped, or controlled external actions are continuing. Durable workflow/task state and configuration remain available for later resumption, subject to retention rules. Reactivation must surface any failed revalidation of subscription or entitlement, integrations, permissions, policy or TeamMate configuration and must not present the TeamMate as Ready until those checks pass.
+
 Avoid anthropomorphic states such as:
 
 - tired

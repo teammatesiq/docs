@@ -357,6 +357,16 @@ The Runtime does not own all these capabilities.
 
 It orchestrates them.
 
+## 12.1 Lifecycle Enforcement
+
+The deployed TeamMate lifecycle is exactly `configuring → probation → active → suspended → archived` (D-001 / F-003). A deployed TeamMate has no `draft` state.
+
+Lifecycle enforcement is deterministic application logic. Before any active execution starts, and again before any controlled external action, the Runtime must confirm that the TeamMate is `active`. A `suspended` TeamMate cannot start new active execution or perform a new controlled external action.
+
+Customer-facing Paused is represented by `status = suspended` and `suspension_reason = customer_paused`. Other supported reasons may include `trial_expired`, `subscription_suspended`, `security_suspension` and `admin_suspended`.
+
+Suspension preserves durable workflow/task state, configuration, required audit history and customer data subject to retention rules. Reactivation must revalidate relevant subscription or entitlement, integrations, permissions, policy and TeamMate configuration before changing the TeamMate to `active`.
+
 # 13. Runtime Execution Model
 
 Conceptually:
@@ -1162,6 +1172,8 @@ Scheduled jobs should create the same traceable workflow/event structures as oth
 
 Scheduled execution must not bypass ordinary permission or policy controls.
 
+The scheduler must not start TeamMate active work while the TeamMate is `suspended`. It may continue only platform maintenance required for security, retention, audit or reactivation validation; such work must not perform a controlled external action on behalf of the suspended TeamMate.
+
 # 59. Notification Architecture
 
 The Notification module receives domain events and determines appropriate delivery.
@@ -1908,7 +1920,7 @@ The architecture is sufficiently implemented for controlled SME beta when:
 15. Significant work is auditable.
 16. Production errors and workflow failures are observable.
 17. Customer integrations can be disconnected.
-18. TeamMates can be paused.
+18. TeamMates can be paused through the canonical Suspended state, with execution blocking, state preservation and reactivation validation enforced.
 19. Application deployment is repeatable.
 20. Core trust and tenant-isolation test suites pass.
 

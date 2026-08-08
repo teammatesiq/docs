@@ -10,7 +10,7 @@ Last updated: 2026-08-08
 
 This document defines the role, responsibilities, capabilities, boundaries, permissions and expected behaviours of Admin TeamMate.
 
-Admin TeamMate is the first commercial TeamMate deployed on TMOS.
+Admin TeamMate is the first commercial TeamMate deployed on TMOS for the UK SME v1 MVP (P-001).
 
 It is the primary product used to validate the TeamMates proposition with SMEs.
 
@@ -474,6 +474,18 @@ Probation may be completed when:
 - the customer confirms readiness
 
 Leaving probation does not automatically grant additional permissions.
+
+## 22.1 Deployed Lifecycle and Customer Pause
+
+Admin TeamMate follows the canonical deployed lifecycle (D-001 / F-003):
+
+Configuring → Probation → Active → Suspended → Archived
+
+It has no deployed Draft state. Customer-facing **Paused** maps to `status = suspended` with `suspension_reason = customer_paused`; it is not a separate lifecycle state.
+
+While Suspended, Admin TeamMate does not start new active execution, run scheduled TeamMate work where it should be stopped, or perform new controlled external actions. Durable workflow/task state, configuration, required audit history and retained customer data are preserved.
+
+Reactivation requires relevant subscription or entitlement, Microsoft 365 integrations, permissions, policy and Admin TeamMate configuration to be revalidated before work resumes.
 
 # 23. Customer Learning
 

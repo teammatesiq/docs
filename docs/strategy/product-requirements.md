@@ -16,7 +16,7 @@ It is the primary product source of truth for Product, UX, Architecture and Engi
 
 TeamMates provides governed digital colleagues that take meaningful repeatable work off human teams while keeping people in control of important decisions.
 
-Admin TeamMate is the first commercial TeamMate.
+Admin TeamMate is the first commercial TeamMate for the UK SME v1 MVP (P-001).
 
 It is not a generic chatbot or open-ended AI assistant.
 
@@ -243,6 +243,20 @@ Discover
 
 → Subscribe
 
+## 10.1 Deployed TeamMate Lifecycle
+
+The canonical deployed TeamMate lifecycle is (D-001 / F-003):
+
+Configuring → Probation → Active → Suspended → Archived
+
+There is no Draft state for a deployed TeamMate. Draft remains valid only for definition assets where their own lifecycle explicitly includes it.
+
+Customer-facing **Paused** maps to `status = suspended` with `suspension_reason = customer_paused`; it is not a separate lifecycle state. Other supported suspension reasons may include `trial_expired`, `subscription_suspended`, `security_suspension` and `admin_suspended`.
+
+While Suspended, TMOS must not start new active execution or perform new controlled external actions, and must stop scheduled TeamMate work where appropriate. It must preserve durable workflow and task state, configuration, required audit history and customer data subject to applicable retention rules.
+
+Reactivation must revalidate the relevant subscription or entitlement, integrations, permissions, policy and TeamMate configuration before active execution resumes.
+
 # 11. Probation Model
 
 Every new Admin TeamMate begins in Probation Mode.
@@ -397,7 +411,7 @@ FR-029
 Personalisation shall not override governance or permissions.
 
 FR-030  
-The customer shall be able to pause or disconnect Admin TeamMate.
+The customer shall be able to pause or disconnect Admin TeamMate. Pausing shall apply the canonical Suspended state with `suspension_reason = customer_paused`.
 
 # 14. Non-Functional Requirements
 

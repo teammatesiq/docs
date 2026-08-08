@@ -745,11 +745,9 @@ The long-term goal is for new TeamMate roles to be substantially configuration-d
 
 # 34. TeamMate Lifecycle
 
-A TeamMate lifecycle includes:
+A deployed TeamMate lifecycle is exactly (D-001 / F-003):
 
-Draft
-
-→ Configuring
+Configuring
 
 → Probation
 
@@ -762,6 +760,14 @@ Draft
 A TeamMate must never automatically gain additional authority merely by becoming Active.
 
 Permissions remain explicit.
+
+Draft may be used by versioned definition and Blueprint lifecycles, but is not a deployed TeamMate lifecycle state.
+
+Customer-facing **Paused** maps to `status = suspended` and `suspension_reason = customer_paused`; it is not a separate domain state. Other supported reasons may include `trial_expired`, `subscription_suspended`, `security_suspension` and `admin_suspended`.
+
+While Suspended, TMOS must block new active execution and new controlled external actions, stop scheduled TeamMate work where appropriate, and preserve durable workflow and task state, configuration, required audit history and customer data according to applicable retention rules.
+
+Reactivation must revalidate relevant subscription or entitlement, integrations, permissions, policy and TeamMate configuration before execution resumes.
 
 # 35. Probation Architecture
 
