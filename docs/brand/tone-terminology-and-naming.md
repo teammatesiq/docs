@@ -1,10 +1,10 @@
 ---
 Document title: TeamMatesIQ Tone, Terminology and Naming Standard
 Version: 0.1
-Status: Draft
+Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
-Decision status: Core direction approved; document pending canonical review
+Decision status: Approved
 ---
 
 # 1. Purpose
