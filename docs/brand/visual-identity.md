@@ -1,10 +1,10 @@
 ---
 Document title: TeamMatesIQ Visual Identity Standard
 Version: 0.1
-Status: Draft
+Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
-Decision status: Core direction approved; final artwork pending
+Decision status: Approved; final artwork remains a separate pending work package
 ---
 
 # 1. Purpose
@@ -62,6 +62,8 @@ Typography should feel confident, modern, warm and clear. Product usability and 
 | App icon and favicon | Symbol-only version designed and tested specifically for small sizes. |
 
 Future roles may use controlled accent colours or identifiers within the shared identity. They must not introduce unrelated logos, typefaces or colour systems.
+
+**Helping businesses work smarter.** is the TeamMatesIQ brand promise. It is not part of the logo or primary brand lockup and must not be incorporated into either.
 
 # 6. Logo Direction
 
