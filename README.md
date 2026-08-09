@@ -6,6 +6,8 @@ This repository is the central source of truth for TeamMatesIQ strategy, archite
 
 See the [TeamMates canonical document register](docs/README.md).
 
+The approved implementation sequence is maintained in the [Admin TeamMate MVP Sprint Plan](engineering/backlog/admin-teammate-mvp-sprint-plan.md), with build-ready work in the [Sprint 1 Engineering Backlog](engineering/backlog/sprint-01-engineering-backlog.md).
+
 ## Repository structure
 
 - `docs/` — business, product and delivery documentation
