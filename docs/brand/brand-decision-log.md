@@ -39,7 +39,7 @@ This log records material TeamMatesIQ brand decisions and their current status. 
 | B-023 | TeamMatesIQ has the primary corporate logo; TeamMates is an endorsed product wordmark; role names are titles within one shared identity rather than separate logos. | Approved | 2026-08-09 | Visual Identity |
 | B-024 | The ribbon-and-IQ concept is to be refined through The Flow; final artwork is not yet approved. | Approved direction; artwork pending | 2026-08-09 | Visual Identity; future asset work package |
 
-# 3. Open Brand Actions
+# 3. Brand Actions
 
 | ID | Action | Owner | Decision state |
 |---|---|---|---|
@@ -47,7 +47,7 @@ This log records material TeamMatesIQ brand decisions and their current status. 
 | BA-002 | Create and approve final logo, compact mark, favicon and production asset pack. | Head of Brand | Design and approval required |
 | BA-003 | Complete legal availability and employment-adjacent language review. | Legal / Head of Brand | Review required |
 | BA-004 | Apply approved messaging to website and product journeys once Commercial and UX specifications are sufficiently mature. | Brand / Commercial / UX | Upstream dependencies |
-| BA-005 | Reconcile legacy **digital colleague** and **PM TeamMate** references in canonical specifications. | Product / Brand | Cross-document update required |
+| BA-005 | Reconcile legacy **digital colleague** and **PM TeamMate** references in the 17 canonical specifications. | Product / Brand | Completed 2026-08-09 |
 
 # 4. Change Control
 
