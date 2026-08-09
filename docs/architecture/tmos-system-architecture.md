@@ -1957,7 +1957,7 @@ The architecture should enable TeamMates to:
 
 without requiring customers to understand the underlying AI or infrastructure.
 
-The system architecture succeeds when the customer experiences a dependable digital colleague while TMOS quietly provides the governance, orchestration and engineering controls underneath.
+The system architecture succeeds when the customer experiences a dependable digital teammate while TMOS quietly provides the governance, orchestration and engineering controls underneath.
 
 # 103. Related Documents
 
