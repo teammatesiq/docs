@@ -1,10 +1,10 @@
 ---
 Document title: TeamMatesIQ Brand Claims Register
 Version: 0.1
-Status: Draft
+Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
-Decision status: Claims framework approved; register pending canonical review
+Decision status: Approved
 ---
 
 # 1. Purpose
