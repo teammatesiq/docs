@@ -1022,7 +1022,7 @@ TeamMate Factory = role manufacturing system
 
 TeamMate Blueprint = deployable role definition
 
-TeamMate Instance = customer's live digital colleague
+TeamMate Instance = customer's live digital teammate
 
 # 55. Relationship to TeamMate DNA
 
