@@ -1763,7 +1763,7 @@ The API and service interface layer is sufficiently defined for controlled SME b
 
 # 89. Final API Principle
 
-The API should expose what a digital colleague does.
+The API should expose what a digital teammate does.
 
 Customers and applications interact with:
 

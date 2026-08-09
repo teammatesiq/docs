@@ -14,13 +14,13 @@ It is the primary product source of truth for Product, UX, Architecture and Engi
 
 # 2. Product Vision
 
-TeamMates provides governed digital colleagues that take meaningful repeatable work off human teams while keeping people in control of important decisions.
+TeamMates provides governed digital teammates that take meaningful repeatable work off human teams while keeping people in control of important decisions.
 
 Admin TeamMate is the first commercial TeamMate for the UK SME v1 MVP (P-001).
 
 It is not a generic chatbot or open-ended AI assistant.
 
-It is a digital colleague with:
+It is a digital teammate with:
 
 - a defined role
 - clear responsibilities
@@ -69,11 +69,11 @@ The product objective is to remove administrative work rather than simply make A
 
 Customer-facing proposition:
 
-> Hire digital colleagues that take real work off your team.
+> Create more capacity for the work that matters.
 
 For the first product:
 
-> Admin TeamMate keeps on top of your email, meetings, actions and routine admin.
+> Hire an Admin TeamMate that keeps on top of your email, meetings, actions and routine admin.
 
 Avoid positioning the product primarily as:
 
@@ -590,7 +590,7 @@ Admin TeamMate is ready for controlled SME beta when a customer can reliably:
 
 The first phase of TeamMates exists to answer:
 
-> Will SMEs repeatedly pay for a digital colleague they trust to perform meaningful everyday work?
+> Will SMEs repeatedly pay for a digital teammate they trust to perform meaningful everyday work?
 
 The product roadmap must remain evidence-led until this is proven.
 

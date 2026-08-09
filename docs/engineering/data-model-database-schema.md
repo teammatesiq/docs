@@ -363,7 +363,7 @@ Table:
 
 Purpose:
 
-Represents a deployed customer-specific digital colleague.
+Represents a deployed customer-specific digital teammate.
 
 Fields:
 

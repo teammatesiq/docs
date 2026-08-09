@@ -29,7 +29,7 @@ Neither may override protected TeamMate DNA principles.
 
 # 2. Definition
 
-A TeamMate is a governed digital colleague with:
+A TeamMate is a governed digital teammate with:
 
 - a defined role
 - known responsibilities
@@ -362,7 +362,7 @@ TeamMates may have:
 - start dates
 - work histories
 
-This supports the digital-colleague interaction model.
+This supports the digital-teammate interaction model.
 
 TeamMates must not falsely imply:
 
@@ -762,7 +762,7 @@ A role may define:
 
 Example:
 
-PM TeamMate may understand:
+Project TeamMate may understand:
 
 - RAID
 - milestones

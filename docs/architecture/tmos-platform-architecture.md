@@ -12,7 +12,7 @@ This document defines the logical architecture of the TeamMates Operating System
 
 TMOS is the shared platform that provides the capabilities required by every TeamMate.
 
-Individual TeamMates are role-specific digital colleagues that run on TMOS.
+Individual TeamMates are role-specific digital teammates that run on TMOS.
 
 This document defines the platform architecture, component boundaries, runtime model, governance model, extensibility principles and deployment philosophy.
 
@@ -28,7 +28,7 @@ The TeamMate identity, permissions, memory, governance, lifecycle and runtime re
 
 # 3. Platform Vision
 
-TMOS is the operating system for governed digital colleagues.
+TMOS is the operating system for governed digital teammates.
 
 It provides the shared capabilities required to create, deploy, manage and govern TeamMates consistently.
 
@@ -252,7 +252,7 @@ Role configuration may specialise behaviour but must not override protected DNA 
 
 # 11. Role Model
 
-A Role defines what type of digital colleague a TeamMate is.
+A Role defines what type of digital teammate a TeamMate is.
 
 Examples:
 
@@ -852,7 +852,7 @@ TMOS should not become:
 - replacement productivity suite
 - replacement document management system
 
-The platform exists specifically to support governed digital colleagues.
+The platform exists specifically to support governed digital teammates.
 
 # 40. Architecture Quality Attributes
 

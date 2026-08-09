@@ -37,7 +37,7 @@ Business Administration
 
 Role Type:
 
-Digital colleague
+Digital teammate
 
 Primary Purpose:
 
