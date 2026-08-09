@@ -4,6 +4,7 @@ Version: 0.1
 Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
+Decision status: Approved
 ---
 
 # 1. Purpose
@@ -43,7 +44,7 @@ This log records material TeamMatesIQ brand decisions and their current status. 
 
 | ID | Action | Owner | Decision state |
 |---|---|---|---|
-| BA-001 | Complete canonical review of the Brand Foundation document set. | Head of Brand / Programme Director | Review required |
+| BA-001 | Complete canonical review of the Brand Foundation document set. | Head of Brand / Programme Director | Completed 2026-08-09 |
 | BA-002 | Create and approve final logo, compact mark, favicon and production asset pack. | Head of Brand | Design and approval required |
 | BA-003 | Complete legal availability and employment-adjacent language review. | Legal / Head of Brand | Review required |
 | BA-004 | Apply approved messaging to website and product journeys once Commercial and UX specifications are sufficiently mature. | Brand / Commercial / UX | Upstream dependencies |
