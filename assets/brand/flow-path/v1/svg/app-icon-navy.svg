@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 512 512"
+   role="img"
+   aria-labelledby="title desc"
+   version="1.1"
+   id="svg12"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs16" />
+  <title
+     id="title">TeamMatesIQ application icon</title>
+  <desc
+     id="desc">The Flow Path symbol on a rounded square.</desc>
+  <rect
+     x="16"
+     y="16"
+     width="480"
+     height="480"
+     rx="104"
+     fill="#0B1F3A"
+     stroke="none"
+     stroke-width="0"
+     id="rect4" />
+  <g
+     transform="matrix(2,0,0,2,96,171)"
+     id="g10">
+    <path
+       fill="#2563eb"
+       d="M 0,30 H 45 C 64,30 76,24 89,12 106,-4 129,-5 160,0 V 22 C 136,19 121,21 107,34 91,49 74,55 45,55 H 0 Z"
+       id="path6" />
+    <path
+       fill="#20b8a6"
+       d="M 0,60 H 45 C 64,60 76,54 89,42 106,26 129,25 160,30 V 52 C 136,49 121,51 107,64 91,79 74,85 45,85 H 0 Z"
+       id="path8" />
+  </g>
+</svg>

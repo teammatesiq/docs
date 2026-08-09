@@ -37,12 +37,12 @@ The canonical specification set currently contains 17 documents: 11 substantive 
 
 | Document name | Path | Version | Status | Classification | Purpose |
 |---|---|---:|---|---|---|
-| [Brand Foundation](brand/brand-foundation.md) | `docs/brand/brand-foundation.md` | 0.1 | Draft | Governance document | Defines the approved brand architecture, audience, positioning, promise, personality and creative direction. |
-| [Messaging Architecture](brand/messaging-architecture.md) | `docs/brand/messaging-architecture.md` | 0.1 | Draft | Governance document | Defines the customer-facing message hierarchy and touchpoint priorities. |
-| [Tone, Terminology and Naming](brand/tone-terminology-and-naming.md) | `docs/brand/tone-terminology-and-naming.md` | 0.1 | Draft | Governance document | Governs naming, lifecycle language, terminology, tone and editorial usage. |
-| [Claims Register](brand/claims-register.md) | `docs/brand/claims-register.md` | 0.1 | Draft | Governance document | Controls proposition, capability, evidence-backed, beta and prohibited claims. |
-| [Visual Identity](brand/visual-identity.md) | `docs/brand/visual-identity.md` | 0.1 | Draft | Governance document | Defines The Flow, colour, typography, imagery and brand-lockup direction. |
-| [Brand Decision Log](brand/brand-decision-log.md) | `docs/brand/brand-decision-log.md` | 0.1 | Current | Governance document | Records approved brand decisions and open implementation actions. |
+| [Brand Foundation](brand/brand-foundation.md) | `docs/brand/brand-foundation.md` | 0.1 | Current | Governance document | Defines the approved brand architecture, audience, positioning, promise, personality and creative direction. |
+| [Messaging Architecture](brand/messaging-architecture.md) | `docs/brand/messaging-architecture.md` | 0.1 | Current | Governance document | Defines the customer-facing message hierarchy and touchpoint priorities. |
+| [Tone, Terminology and Naming](brand/tone-terminology-and-naming.md) | `docs/brand/tone-terminology-and-naming.md` | 0.1 | Current | Governance document | Governs naming, lifecycle language, terminology, tone and editorial usage. |
+| [Claims Register](brand/claims-register.md) | `docs/brand/claims-register.md` | 0.1 | Current | Governance document | Controls proposition, capability, evidence-backed, beta and prohibited claims. |
+| [Visual Identity](brand/visual-identity.md) | `docs/brand/visual-identity.md` | 1.0 | Current | Governance document | Defines The Flow, colour, typography, imagery, brand-lockup architecture and canonical Flow Path v1 assets. |
+| [Brand Decision Log](brand/brand-decision-log.md) | `docs/brand/brand-decision-log.md` | 1.0 | Current | Governance document | Records approved brand decisions and open implementation actions. |
 
 ## Governance documents and baseline controls
 
