@@ -1,17 +1,17 @@
 ---
 Document title: TeamMatesIQ Visual Identity Standard
-Version: 0.1
+Version: 1.0
 Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
-Decision status: Approved; final artwork remains a separate pending work package
+Decision status: Approved; Flow Path v1 is the canonical production identity; legal and trademark availability review remains outstanding
 ---
 
 # 1. Purpose
 
-This document defines the approved visual identity direction for TeamMatesIQ and TeamMates SME v1. It governs colour, typography, imagery, the Flow device and brand-lockup architecture.
+This document defines the approved visual identity for TeamMatesIQ and TeamMates SME v1. It governs colour, typography, imagery, the Flow device, brand-lockup architecture and the canonical Flow Path v1 production assets.
 
-It does not approve final logo artwork. Final marks and production assets require separate review, accessibility validation and appropriate legal availability checks.
+Flow Path v1 was approved for canonical publication on 2026-08-09. Implementations must still validate accessibility in their actual context. Legal and trademark availability review remains outstanding and may require controlled remediation through brand change control.
 
 # 2. Creative Territory: The Flow
 
@@ -65,25 +65,25 @@ Future roles may use controlled accent colours or identifiers within the shared 
 
 **Helping businesses work smarter.** is the TeamMatesIQ brand promise. It is not part of the logo or primary brand lockup and must not be incorporated into either.
 
-# 6. Logo Direction
+# 6. Approved Logo: Flow Path v1
 
-The final logo should:
+Flow Path v1 is the approved production identity. It refines the ribbon-and-IQ concept into two forward-moving ribbons that express movement, continuity and opened capacity.
 
-- refine the ribbon-and-IQ concept through the approved Flow direction
-- use a clean TeamMatesIQ wordmark
-- convey movement, continuity and opened capacity
-- remain recognisable at favicon size
-- work on light, dark and single-colour applications
-- establish a clear relationship between TeamMatesIQ and TeamMates
+The approved asset family includes:
 
-Final approval requires:
+- TeamMatesIQ corporate lockups in primary, reversed and single-colour treatments
+- TeamMates endorsed product lockups in primary and reversed treatments
+- colour, navy and white standalone symbols
+- light and navy application icons
+- favicon variants tested down to 16 px
+- outlined wordmarks that do not depend on an installed font
+- flat approved colours with no gradients
 
-- small-size and responsive tests
-- accessible contrast checks
-- light, dark and single-colour variants
-- favicon and application-icon tests
-- asset export and naming standards
-- appropriate trademark and legal availability checks
+Admin TeamMate, Project TeamMate and future role names remain product titles and must not receive separate logos.
+
+SVG is the canonical master format. PNG files are convenience derivatives and should be regenerated from the SVG masters when another size is required.
+
+Production assets and usage guidance are held at [`assets/brand/flow-path/v1/`](../../assets/brand/flow-path/v1/README.md).
 
 # 7. Imagery
 
@@ -113,7 +113,7 @@ Avoid:
 
 # 9. Accessibility and Quality Control
 
-Production assets must be checked for:
+Implementations using the production assets must be checked for:
 
 - WCAG 2.2 AA contrast
 - keyboard-focus visibility where interactive
@@ -125,7 +125,9 @@ Production assets must be checked for:
 
 # 10. Asset Status
 
-No existing logo or artwork is made canonical by this document. Production logo files, icons, templates and Flow assets remain a separate work package requiring Brand approval.
+Flow Path v1 is the canonical TeamMatesIQ and TeamMates production identity. Its master files, digital exports, proof and usage rules are approved and versioned under [`assets/brand/flow-path/v1/`](../../assets/brand/flow-path/v1/README.md).
+
+The approval covers the artwork and usage system. It does not close the legal and trademark availability review, and it does not remove the requirement to validate contrast, legibility, file performance and alternative text in each implementation context.
 
 # 11. Related Documents
 

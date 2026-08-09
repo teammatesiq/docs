@@ -1,6 +1,6 @@
 ---
 Document title: TeamMatesIQ Brand Decision Log
-Version: 0.1
+Version: 1.0
 Status: Current
 Owner: Head of Brand
 Last updated: 2026-08-09
@@ -38,14 +38,15 @@ This log records material TeamMatesIQ brand decisions and their current status. 
 | B-021 | The core palette is Deep Navy `#0B1F3A`, Clear Blue `#2563EB`, Aqua `#20B8A6`, Soft White `#F7F8F5`, Slate `#475569` and Ink `#142033`. | Approved | 2026-08-09 | Visual Identity |
 | B-022 | Manrope is the heading typeface and Inter is the body and product-interface typeface, with Arial/sans-serif fallbacks. | Approved | 2026-08-09 | Visual Identity |
 | B-023 | TeamMatesIQ has the primary corporate logo; TeamMates is an endorsed product wordmark; role names are titles within one shared identity rather than separate logos. | Approved | 2026-08-09 | Visual Identity |
-| B-024 | The ribbon-and-IQ concept is to be refined through The Flow; final artwork is not yet approved. | Approved direction; artwork pending | 2026-08-09 | Visual Identity; future asset work package |
+| B-024 | Flow Path is the approved refinement of the ribbon-and-IQ concept within The Flow creative direction. | Approved | 2026-08-09 | Visual Identity |
+| B-025 | Flow Path v1 production artwork and asset pack are approved as the canonical TeamMatesIQ and TeamMates identity. | Approved | 2026-08-09 | Visual Identity; `assets/brand/flow-path/v1/` |
 
 # 3. Brand Actions
 
 | ID | Action | Owner | Decision state |
 |---|---|---|---|
 | BA-001 | Complete canonical review of the Brand Foundation document set. | Head of Brand / Programme Director | Completed 2026-08-09 |
-| BA-002 | Create and approve final logo, compact mark, favicon and production asset pack. | Head of Brand | Design and approval required |
+| BA-002 | Create and approve final logo, compact mark, favicon and production asset pack. | Head of Brand | Completed 2026-08-09 |
 | BA-003 | Complete legal availability and employment-adjacent language review. | Legal / Head of Brand | Review required |
 | BA-004 | Apply approved messaging to website and product journeys once Commercial and UX specifications are sufficiently mature. | Brand / Commercial / UX | Upstream dependencies |
 | BA-005 | Reconcile legacy **digital colleague** and **PM TeamMate** references in the 17 canonical specifications. | Product / Brand | Completed 2026-08-09 |
