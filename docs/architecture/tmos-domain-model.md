@@ -159,7 +159,7 @@ erDiagram
 
 | Aspect | Definition |
 |---|---|
-| Purpose | Represents a deployed digital colleague operating for a customer on TMOS. |
+| Purpose | Represents a deployed digital teammate operating for a customer on TMOS. |
 | Ownership | The deployed instance belongs to the customer Organisation; TMOS owns and governs the runtime representation. |
 | Key attributes | TeamMate identifier, Organisation identifier, Workspace identifier, selected name, Role or Blueprint version reference, DNA version, lifecycle state, suspension reason where suspended, configuration and relevant component-version references. |
 | Relationships | Belongs to an Organisation and Workspace; instantiates a versioned Role or Blueprint; uses Skills, Workflows, Permissions, Policies, Knowledge and Memory; creates Workflow Instances, Tasks, Approvals, Notifications and Audit Events. |
@@ -171,7 +171,7 @@ erDiagram
 
 | Aspect | Definition |
 |---|---|
-| Purpose | Defines the type of digital colleague, including purpose, responsibilities, boundaries, outcomes, default Skills, Workflows, permissions and escalation rules. |
+| Purpose | Defines the type of digital teammate, including purpose, responsibilities, boundaries, outcomes, default Skills, Workflows, permissions and escalation rules. |
 | Ownership | TeamMates-owned canonical platform definition, with specialist ownership and review where required. |
 | Key attributes | Role key, name, description, purpose, version, status, DNA version reference, responsibilities, boundaries, success measures and escalation rules. |
 | Relationships | Selects Skills and Workflows; informs permission templates, policy requirements, knowledge profiles, memory profiles and interaction defaults; is instantiated by deployed TeamMates. |
