@@ -60,7 +60,7 @@ When sources conflict, use the Delivery Operating Model and route the conflict t
 |---|---|---:|---|---|
 | [Delivery Operating Model](governance/delivery-operating-model.md) | `docs/governance/delivery-operating-model.md` | 1.0 | Controlled | Defines authority, chat roles, handoffs, Founder gates and the mandatory delivery route. |
 | [SME v1 Current Release Boundary](governance/sme-v1-current-release-boundary.md) | `docs/governance/sme-v1-current-release-boundary.md` | 1.0 | Controlled | Defines exact product, permission, workflow and no-external-effect scope for the pinned candidate. |
-| [Cross-Repository Baseline Manifest](governance/cross-repository-baseline-manifest.md) | `docs/governance/cross-repository-baseline-manifest.md` | 1.0 | Controlled | Identifies exact repository revisions, schema, deployment evidence and cross-repository authority. |
+| [Cross-Repository Baseline Manifest](governance/cross-repository-baseline-manifest.md) | `docs/governance/cross-repository-baseline-manifest.md` | 1.1 | Controlled | Identifies exact repository revisions, governance-control commits, schema, deployment evidence and cross-repository authority. |
 | [Consistency Audit — 19 August 2026](governance/consistency-audit-2026-08-19.md) | `docs/governance/consistency-audit-2026-08-19.md` | 1.0 | Controlled audit record | Records drift findings, remediation and remaining manual controls. |
 | Canonical Document Register | `docs/README.md` | Current | Controlled | Indexes and classifies the canonical set. |
 
