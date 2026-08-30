@@ -1,9 +1,9 @@
 ---
 Document title: TeamMates Engineering Release Plan
-Version: 1.1
+Version: 1.2
 Status: Controlled
 Owner: Technical Design and QA-Release Authorities
-Last updated: 2026-08-19
+Last updated: 2026-08-30
 ---
 
 # 1. Purpose
@@ -16,7 +16,7 @@ The immediate objective is to reach a commercially testable Admin TeamMate throu
 
 1. Deliver complete customer outcomes, not isolated infrastructure.
 2. Reuse the production-shaped modular monolith and existing workflow patterns.
-3. Keep the current release candidate immutable while acceptance is in progress.
+3. Keep the current release candidate pinned; move its controlled ref only through an explicit, evidenced repin.
 4. Separate merge, deployment, feature activation and production launch.
 5. Fail closed for identity, tenancy, permission, lifecycle and stale-version uncertainty.
 6. Keep Microsoft access at the minimum approved delegated scope.
@@ -31,19 +31,25 @@ The immediate objective is to reach a commercially testable Admin TeamMate throu
 |---|---|
 | Product | Admin TeamMate, SME v1 |
 | Application repository | `teammatesiq/platform` |
-| Corrected release-candidate SHA | `48ad426950d8ce37ac8f336c89bff4d0d9b4424c` |
-| Pinned release branch | `release/sme-v1-rc1` |
+| Release-candidate SHA | `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3` |
+| Pinned release branch | `release/sme-v1-rc1`; fast-forwarded without force and verified at the exact candidate SHA |
 | Database schema | v26 |
-| Development deployment run | `32178832787` — successful |
-| Calendar recovery run | `32243424349` — successful |
+| Exact-target full assurance | `32293888522` — successful |
+| Superseded-candidate deployment evidence | `32178832787` — historical for `48ad426…` only |
+| Superseded-candidate calendar evidence | `32243424349` — historical for `48ad426…` only |
+| Exact-target deployment evidence | `32629805012` — historical deployment evidence, not current-health proof |
+| Current external health | Unproven; renewal owned by #109 |
+| Exact-target `Calendars.Read` and signed-in evidence | Pending under #109 |
+| Development deployment | Blocked pending a credential-neutral #109 operation |
 | Microsoft permissions | Delegated `Mail.Read` and `Calendars.Read` only |
 | External effects | None enabled |
+| Deployment or activation authority created by repin | None |
 | Launch control | `teammatesiq/platform#106` |
 | QA/release gate | `teammatesiq/platform#109` |
 | Important Email live acceptance | `teammatesiq/platform#88` |
-| Parallel next slice | `teammatesiq/platform#154`, default-off and outside candidate |
+| Excluded later work | PRs #157, #160, #162, #164 and #166 |
 
-The current platform `main` branch may contain later fixes or next-slice work. It does not replace the controlled release candidate without an explicit repin and renewed evidence.
+The current platform `main` branch may contain later fixes or next-slice work. It does not replace the controlled release candidate without an explicit repin and renewed evidence. The 30 August repin changes the revision only; it does not authorise deployment, activation, permission expansion, external effects, private beta or production launch.
 
 # 4. Release scope
 
@@ -149,7 +155,8 @@ Completed:
 - exact release-candidate pinning;
 - owner-controlled release orchestration;
 - development OIDC and bounded calendar-secret recovery;
-- exact delegated `Calendars.Read` verification.
+- exact delegated `Calendars.Read` verification for the superseded candidate;
+- Founder-approved schema-v26 repin to `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3`, including the P0 calendar-refresh correction and governance controls through PR #156.
 
 # 7. Remaining milestones
 
@@ -367,12 +374,18 @@ No monitoring design may log email, calendar, draft or customer-knowledge conten
 
 While #109 controls acceptance:
 
-- the pinned release-candidate SHA remains immutable;
+- the current release ref remains pinned until an approved replacement is fast-forwarded without force and verified;
+- the controlled candidate is `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3`, schema v26;
+- the replacement reason is the merged P0 calendar-refresh runtime correction from PR #153 and release/governance controls through PR #156;
 - later `main` changes are not included automatically;
 - a proven P0 defect may trigger a corrected candidate;
 - a repin must identify the exact new SHA, schema and reason;
-- all affected assurance and deployment evidence must be repeated;
-- #154 cannot enter the candidate merely because its code is merged behind a flag.
+- release-ref movement must use a non-force fast-forward and be followed by exact equality evidence;
+- historical deployment evidence does not prove current external health;
+- all affected permission, signed-in, monitoring, rollback, recovery and residual-risk evidence must be repeated or explicitly revalidated against the exact candidate;
+- development deployment is blocked until a credential-neutral operation proves and pins the cache-compatible calendar encryption-key version and preserves Entra credential key sets;
+- no deployment or activation is authorised by the repin decision;
+- PRs #157, #160, #162, #164 and #166 remain excluded.
 
 # 17. Post-release review
 
