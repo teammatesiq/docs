@@ -1,9 +1,9 @@
 ---
 Document title: TeamMates SME v1 Current Release Boundary
-Version: 1.0
+Version: 1.1
 Status: Controlled
 Owner: Founder, Product and QA-Release
-Effective date: 2026-08-19
+Effective date: 2026-08-30
 ---
 
 # 1. Purpose
@@ -39,15 +39,26 @@ Where a specification describes capability beyond this boundary, that wording is
 # 4. Controlled application baseline
 
 - Repository: `teammatesiq/platform`.
-- Corrected release-candidate application SHA: `48ad426950d8ce37ac8f336c89bff4d0d9b4424c`.
+- Release-candidate application SHA: `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3`.
 - Pinned release branch: `release/sme-v1-rc1`.
+- Release-ref transition: fast-forwarded without force and verified at the exact candidate SHA.
 - Database schema: v26.
-- Verified development deployment run: `32178832787`.
-- Verified delegated-calendar recovery run: `32243424349`.
+- Exact-target full Workspace run: `32293888522`.
+- Historical superseded-candidate deployment run: `32178832787`.
+- Historical superseded-candidate calendar-recovery run: `32243424349`.
+- Historical exact-target deployment run: `32629805012`.
+- Current external-health evidence: pending under `teammatesiq/platform#109`.
+- Renewed exact-target delegated-calendar evidence: pending under `teammatesiq/platform#109`.
 - Release-control issue: `teammatesiq/platform#106`.
 - QA/release gate: `teammatesiq/platform#109`.
 
-Later commits on `main` do not automatically replace the pinned release candidate. Replacement requires an explicit release decision and renewed assurance.
+The Founder decision approves candidate replacement only. It does not authorise deployment, controlled-principal or provider activation, permission expansion, external effects, private-beta promotion or production launch.
+
+Run `32629805012` proves that the candidate deployed successfully at that time. It does not prove current environment health, renewed exact-target `Calendars.Read` or signed-in acceptance. Evidence from runs `32178832787` and `32243424349` remains attributable only to superseded candidate `48ad426950d8ce37ac8f336c89bff4d0d9b4424c`.
+
+Development deployment is blocked until #109 approves a credential-neutral operation that proves and pins the cache-compatible calendar encryption-key version and preserves existing Entra credential key sets. The legacy rotating calendar-activation chain must not be retargeted to this candidate.
+
+PRs #157, #160, #162, #164 and #166 are later than the approved candidate and remain excluded.
 
 # 5. Microsoft permission boundary
 
@@ -218,6 +229,8 @@ The release candidate cannot progress beyond internal alpha until #109 records:
 - consistent Today, Work Queue and Activity evidence;
 - monitoring, rollback and recovery evidence;
 - residual risks and a production recommendation.
+
+No acceptance, permission, health, monitoring or recovery evidence transfers automatically from the superseded candidate. #109 must bind renewed evidence to the exact candidate revision and resulting environment state.
 
 Production launch requires a separate explicit Founder approval.
 

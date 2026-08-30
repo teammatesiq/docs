@@ -2,7 +2,7 @@
 
 This register indexes the canonical documentation set for the TeamMates product and TMOS platform.
 
-As of 19 August 2026, the canonical specification set contains **17 substantive specifications and no placeholders**. Specifications have different approval states; classification describes completeness, not release authority.
+As of 30 August 2026, the canonical specification set contains **17 substantive specifications and no placeholders**. Specifications have different approval states; classification describes completeness, not release authority.
 
 The exact current release boundary is governed by:
 
@@ -51,16 +51,16 @@ When sources conflict, use the Delivery Operating Model and route the conflict t
 | [Security, Privacy and Governance](security/security-privacy-governance.md) | `docs/security/security-privacy-governance.md` | 1.0 | Draft | Substantive specification | Defines security, privacy, tenant, permission, human-control and governance requirements. |
 | [Data Model and Database Schema](engineering/data-model-database-schema.md) | `docs/engineering/data-model-database-schema.md` | 1.0 | Draft | Substantive specification | Defines target PostgreSQL data structures, tenancy controls, persistence and audit expectations. Executed migrations live in `teammatesiq/platform`. |
 | [API Contract and Service Interfaces](engineering/api-contract-service-interfaces.md) | `docs/engineering/api-contract-service-interfaces.md` | 1.0 | Draft | Substantive specification | Defines target API resources, services and events. Accepted production code/contracts at the pinned release revision govern implemented behaviour. |
-| [Engineering Release Plan](engineering/engineering-release-plan.md) | `docs/engineering/engineering-release-plan.md` | 1.1 | Controlled | Substantive specification | Defines the exact release candidate, streams, milestones, quality gates, deployment, rollback and Founder launch gate. |
+| [Engineering Release Plan](engineering/engineering-release-plan.md) | `docs/engineering/engineering-release-plan.md` | 1.2 | Controlled | Substantive specification | Defines the exact release candidate, streams, milestones, quality gates, deployment, rollback and Founder launch gate. |
 | [Test and Evaluation Specification](engineering/test-evaluation-specification.md) | `docs/engineering/test-evaluation-specification.md` | 1.1 | Controlled | Substantive specification | Defines automated, signed-in, live, AI-behaviour, security, reliability, accessibility and release evidence. |
 
 ## 4. Baseline and operating governance
 
 | Document | Path | Version | Status | Purpose |
 |---|---|---:|---|---|
-| [Delivery Operating Model](governance/delivery-operating-model.md) | `docs/governance/delivery-operating-model.md` | 1.0 | Controlled | Defines authority, chat roles, handoffs, Founder gates and the mandatory delivery route. |
-| [SME v1 Current Release Boundary](governance/sme-v1-current-release-boundary.md) | `docs/governance/sme-v1-current-release-boundary.md` | 1.0 | Controlled | Defines exact product, permission, workflow and no-external-effect scope for the pinned candidate. |
-| [Cross-Repository Baseline Manifest](governance/cross-repository-baseline-manifest.md) | `docs/governance/cross-repository-baseline-manifest.md` | 1.1 | Controlled | Identifies exact repository revisions, governance-control commits, schema, deployment evidence and cross-repository authority. |
+| [Delivery Operating Model](governance/delivery-operating-model.md) | `docs/governance/delivery-operating-model.md` | 1.1 | Controlled | Defines authority, chat roles, handoffs, Founder gates and the mandatory delivery route. |
+| [SME v1 Current Release Boundary](governance/sme-v1-current-release-boundary.md) | `docs/governance/sme-v1-current-release-boundary.md` | 1.1 | Controlled | Defines exact product, permission, workflow and no-external-effect scope for the pinned candidate. |
+| [Cross-Repository Baseline Manifest](governance/cross-repository-baseline-manifest.md) | `docs/governance/cross-repository-baseline-manifest.md` | 1.2 | Controlled | Identifies exact repository revisions, governance-control commits, schema, deployment evidence and cross-repository authority. |
 | [Consistency Audit — 19 August 2026](governance/consistency-audit-2026-08-19.md) | `docs/governance/consistency-audit-2026-08-19.md` | 1.0 | Controlled audit record | Records drift findings, remediation and remaining manual controls. |
 | Canonical Document Register | `docs/README.md` | Current | Controlled | Indexes and classifies the canonical set. |
 
@@ -85,7 +85,7 @@ Executable implementation is intentionally held in `teammatesiq/platform`, not d
 | Approved Sprint 1 backlog | `engineering/backlog/sprint-01-engineering-backlog.md` | Present in this repository |
 | Application code | `teammatesiq/platform/apps` and `packages` | Production-shaped implementation present |
 | Database migrations | `teammatesiq/platform` migration paths | Implemented through schema v26 for the pinned release candidate |
-| Runtime/deployment infrastructure | `teammatesiq/platform/infra`, scripts and workflows | Implemented and used for verified development deployment |
+| Runtime/deployment infrastructure | `teammatesiq/platform/infra`, scripts and workflows | Implemented; run `32629805012` is historical exact-target deployment evidence, while current external health and renewed exact-target release evidence remain pending under #109 |
 | Automated assurance | `teammatesiq/platform` tests and GitHub Actions | Extensive build, boundary, config, persistence, security and browser evidence present |
 | Architecture decision records in this repository | `engineering/adr/` | Legacy planned folder remains incomplete; implementation decisions are currently traceable through issues/PRs and should be consolidated when materially useful |
 | C4, sequence and ERD exports in this repository | `architecture/` | Legacy planned folders remain incomplete; code, runtime docs and migrations currently contain the implemented detail |
@@ -98,12 +98,17 @@ An empty legacy artefact folder is not, by itself, a release blocker when the re
 The controlled internal-alpha candidate is:
 
 - Admin TeamMate only;
-- application SHA `48ad426950d8ce37ac8f336c89bff4d0d9b4424c`;
+- application SHA `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3`;
+- `release/sme-v1-rc1` fast-forwarded without force and verified at that exact SHA;
 - schema v26;
 - delegated `Mail.Read` and `Calendars.Read` only;
 - no Microsoft write permission, file authority or consequential external effect;
-- release gate under `teammatesiq/platform#109`;
-- Trusted Draft Workbench under #154 default-off and outside the candidate.
+- exact-target full Workspace run `32293888522` passed;
+- run `32629805012` is historical exact-target deployment evidence only;
+- current external health, renewed exact-target `Calendars.Read` and signed-in acceptance remain unproven under `teammatesiq/platform#109`;
+- development deployment remains blocked pending a credential-neutral operation that proves the cache-compatible calendar key version and preserves Entra credential key sets;
+- no deployment, activation, private-beta or production approval is created by the repin decision;
+- PRs #157, #160, #162, #164 and #166 remain outside the candidate.
 
 ## 8. Change-control expectations
 

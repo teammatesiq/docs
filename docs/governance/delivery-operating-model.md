@@ -1,9 +1,10 @@
 ---
 Document title: TeamMates Delivery Operating Model
-Version: 1.0
+Version: 1.1
 Status: Controlled
 Owner: Founder and Orchestration
 Effective date: 2026-08-19
+Last updated: 2026-08-30
 ---
 
 # 1. Purpose
@@ -258,14 +259,19 @@ No approval is implied by possession of code, a dormant adapter, a prototype con
 
 # 7. Current programme phase
 
-As at 19 August 2026:
+As at 30 August 2026:
 
-- Issue `teammatesiq/platform#106` controls the SME v1 launch critical path.
-- Issue `teammatesiq/platform#109` owns internal-alpha acceptance and release assurance.
-- The corrected release candidate is pinned at application SHA `48ad426950d8ce37ac8f336c89bff4d0d9b4424c`, schema v26.
+- Issue `teammatesiq/platform#106` controls the SME v1 launch critical path and records the Founder-approved candidate replacement.
+- Issue `teammatesiq/platform#109` owns renewed exact-candidate assurance.
+- `release/sme-v1-rc1` was fast-forwarded without force and verified to resolve exactly to `76713a8c125f4a9b881e8d934b8b1b6d9d82f4d3`, schema v26.
+- Exact-target full Workspace run `32293888522` passed.
+- Run `32629805012` is historical evidence that this candidate deployed successfully; it is not proof of current external health or completed release acceptance.
+- Exact-candidate delegated `Calendars.Read`, signed-in customer paths, monitoring, rollback, recovery and residual-risk evidence remain open under #109.
+- Development deployment is blocked until #109 approves a credential-neutral operation that proves and pins the cache-compatible calendar encryption-key version and preserves existing Entra credential key sets.
 - Delegated Microsoft permissions remain `Mail.Read` and `Calendars.Read` only.
 - No Microsoft write permission or consequential external action is enabled.
-- Issue `teammatesiq/platform#154` may proceed in parallel as a default-off product slice but must not replace or broaden the pinned release candidate before the release gate closes.
+- The candidate-replacement decision does not authorise deployment, feature activation, private beta or production launch.
+- PRs #157, #160, #162, #164 and #166 remain outside the candidate.
 - No new horizontal platform foundation, generic workflow framework or dormant external-action work enters the launch path without a proven P0 defect or explicit Founder decision.
 
 # 8. Canonical chat register
